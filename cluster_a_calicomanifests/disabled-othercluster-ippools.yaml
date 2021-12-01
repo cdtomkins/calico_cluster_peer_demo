@@ -1,0 +1,17 @@
+apiVersion: projectcalico.org/v3
+kind: IPPool
+metadata:
+  name: disabled-podcidr-for-clusterb
+spec:
+  cidr: 10.210.0.0/16
+  disabled: true
+  natOutgoing: false
+---
+apiVersion: projectcalico.org/v3
+kind: IPPool
+metadata:
+  name: disabled-servicecidr-for-clusterb
+spec:
+  cidr: 10.211.0.0/16
+  disabled: true
+  natOutgoing: false

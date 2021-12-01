@@ -1,0 +1,17 @@
+apiVersion: projectcalico.org/v3
+kind: BGPPeer
+metadata:
+  name: cluster-b-m03
+spec:
+  asNumber: 64513
+  nodeSelector: route-reflector == 'true'
+  peerIP: 172.17.0.9
+---
+apiVersion: projectcalico.org/v3
+kind: BGPPeer
+metadata:
+  name: cluster-b-m04
+spec:
+  asNumber: 64513
+  nodeSelector: route-reflector == 'true'
+  peerIP: 172.17.0.10
